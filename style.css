@@ -192,33 +192,39 @@ summary {
   align-items: center;
   padding: 12px 0;
   border-bottom: 1px solid #eee;
+  gap: 15px;
 }
 
-/* Item text (name + price) */
+/* Item text (name + price) - takes available space but doesn't push button */
 .cart-item span {
   flex: 1;
   font-size: 14px;
   color: #333;
+  word-break: break-word;
 }
 
-/* Circular remove button */
+/* Green circular remove button */
 .remove-btn {
-  display: inline-block;        /* prevents stretching */
-  width: auto;                  /* shrink to content */
-  padding: 6px 12px;            /* control size */
-  font-size: 14px;
-
-  border-radius: 20px;          /* pill shape */
-  background: #ff4d4d;
+  background: #25D366;  /* WhatsApp green */
   color: white;
   border: none;
-
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   cursor: pointer;
-  white-space: nowrap;          /* prevents weird wrapping */
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;  /* Prevents button from stretching */
+  transition: background 0.2s ease;
 }
 
-.remove-btn:hover {
-  background: #cc0000;
+/* Turn red on hover/tap */
+.remove-btn:hover,
+.remove-btn:active {
+  background: #ff4444;
 }
 
 /* Empty cart message */
