@@ -1,14 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Mr Good Restaurant</title>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
-<nav class="nav">
-  <h2>Mr Good</h2>
-
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <h3 class="logo">Mr Good</h3>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="#">Menu</a>
+    <a href="menu.html">Menu</a>
   </div>
 </nav>
-
 <section class="menu">
   <h2>Full Menu</h2>
 
@@ -649,66 +659,110 @@
 
       <div class="food-item">
         <h4>Big Whole Cake</h4>
-        <p>Large cake
+        <p>A generously sized cake perfect for birthdays and small gatherings.</p>
+        <span>₦30000</span>
+        <button onclick="addToCart('Regular Whole Cake', 30000)">Add</button>
+      </div>
+     <div class="food-item">
+        <h4>Large Whole Cake</h4.</p>
+        <span>₦35000</span>
+        <button onclick="addToCart('Regular Whole Cake', 35000)">Add</button>
+      </div>      
+    </details>
+    
+  </div>
+</div>
+        
 
           <!-- ICE CREAM SECTION -->
-<div class="menu-section">
+<section class="menu-section">
   <h3>Ice Cream</h3>
 
   <div class="food-container">
 
-    <div class="food-item">
-      <h4>Cone</h4>
-      <p>Crispy cone options</p>
-      <details>
-        <summary>Select option</summary>
-        <p>Cone Only - ₦500</p>
+    <!-- Cone -->
+    <details>
+      <summary>Cone</summary>
+
+      <div class="food-item">
+        <h4>Cone Only</h4>
+        <p>Crunchy empty cone for a light snack.</p>
+        <span>₦500</span>
         <button onclick="addToCart('Cone Only', 500)">Add</button>
+      </div>
 
-        <p>Cone Ice Cream - ₦2000</p>
+      <div class="food-item">
+        <h4>Cone Ice Cream</h4>
+        <p>Crispy cone filled with creamy ice cream.</p>
+        <span>₦2000</span>
         <button onclick="addToCart('Cone Ice Cream', 2000)">Add</button>
-      </details>
-    </div>
+      </div>
 
-    <div class="food-item">
-      <h4>Cup Ice Cream</h4>
-      <p>Served chilled in a cup</p>
-      <details>
-        <summary>Select size</summary>
-        <p>Small - ₦4000</p>
-        <button onclick="addToCart('Cup Ice Cream Small', 4000)">Add</button>
+    </details>
 
-        <p>Medium - ₦6000</p>
-        <button onclick="addToCart('Cup Ice Cream Medium', 6000)">Add</button>
+    <!-- Cup Ice Cream -->
+    <details>
+      <summary>Cup Ice Cream</summary>
 
-        <p>Large - ₦8000</p>
-        <button onclick="addToCart('Cup Ice Cream Large', 8000)">Add</button>
-      </details>
-    </div>
+      <div class="food-item">
+        <h4>Small Cup</h4>
+        <p>Small serving of smooth, creamy ice cream.</p>
+        <span>₦4000</span>
+        <button onclick="addToCart('Small Cup Ice Cream', 4000)">Add</button>
+      </div>
 
-    <div class="food-item">
-      <h4>Packed Ice Cream</h4>
-      <p>Take-home packs in different sizes</p>
-      <details>
-        <summary>Select size</summary>
-        <p>120ml - ₦1000</p>
-        <button onclick="addToCart('Packed Ice Cream 120ml', 1000)">Add</button>
+      <div class="food-item">
+        <h4>Medium Cup</h4>
+        <p>Medium serving for a more satisfying treat.</p>
+        <span>₦6000</span>
+        <button onclick="addToCart('Medium Cup Ice Cream', 6000)">Add</button>
+      </div>
 
-        <p>200ml - ₦1500</p>
-        <button onclick="addToCart('Packed Ice Cream 200ml', 1500)">Add</button>
+      <div class="food-item">
+        <h4>Large Cup</h4>
+        <p>Large portion of rich and creamy ice cream.</p>
+        <span>₦8000</span>
+        <button onclick="addToCart('Large Cup Ice Cream', 8000)">Add</button>
+      </div>
 
-        <p>150ml - ₦3500</p>
-        <button onclick="addToCart('Packed Ice Cream 150ml', 3500)">Add</button>
+    </details>
 
-        <p>900ml - ₦6500</p>
-        <button onclick="addToCart('Packed Ice Cream 900ml', 6500)">Add</button>
-      </details>
-    </div>
+    <!-- Packed Ice Cream -->
+    <details>
+      <summary>Packed Ice Cream</summary>
+
+      <div class="food-item">
+        <h4>120ml</h4>
+        <p>Small takeaway pack of ice cream.</p>
+        <span>₦1000</span>
+        <button onclick="addToCart('120ml Ice Cream', 1000)">Add</button>
+      </div>
+
+      <div class="food-item">
+        <h4>200ml</h4>
+        <p>Moderate pack for quick enjoyment.</p>
+        <span>₦1500</span>
+        <button onclick="addToCart('200ml Ice Cream', 1500)">Add</button>
+      </div>
+
+      <div class="food-item">
+        <h4>500ml</h4>
+        <p>Family-size pack for sharing.</p>
+        <span>₦3500</span>
+        <button onclick="addToCart('500ml Ice Cream', 3500)">Add</button>
+      </div>
+
+      <div class="food-item">
+        <h4>900ml</h4>
+        <p>Large pack perfect for gatherings.</p>
+        <span>₦6500</span>
+        <button onclick="addToCart('900ml Ice Cream', 6500)">Add</button>
+      </div>
+
+    </details>
 
   </div>
-</div>
-
-
+</section>
 <!-- DRINKS SECTION -->
 <div class="menu-section">
   <h3>Drinks</h3>
@@ -858,5 +912,6 @@
   </div>
 </div>
       </section>
-
+<script src="script.js"></script>
       </body>
+</html>
