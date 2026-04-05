@@ -276,3 +276,6 @@ footer {
     font-size: 20px;
   }
 }
+html{
+  transition: smooth;
+}
