@@ -171,7 +171,8 @@ summary {
   border-radius: 16px;
 }
 
-.cart button {
+/* WhatsApp Order Button ONLY */
+.cart > button {
   width: 100%;
   padding: 12px;
   background: #25D366;
@@ -195,7 +196,7 @@ summary {
   gap: 15px;
 }
 
-/* Item text (name + price) - takes available space but doesn't push button */
+/* Item text (name + price) */
 .cart-item span {
   flex: 1;
   font-size: 14px;
@@ -203,28 +204,29 @@ summary {
   word-break: break-word;
 }
 
-/* Green circular remove button */
-.remove-btn {
-  background: #25D366;  /* WhatsApp green */
+/* Green circular remove button - MORE SPECIFIC */
+.cart-item .remove-btn {
+  background: #25D366 !important;  /* Force green */
   color: white;
   border: none;
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 50% !important;  /* Force circle */
   cursor: pointer;
   font-size: 18px;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;  /* Prevents button from stretching */
+  flex-shrink: 0;
   transition: background 0.2s ease;
+  padding: 0;  /* Remove default padding */
 }
 
 /* Turn red on hover/tap */
-.remove-btn:hover,
-.remove-btn:active {
-  background: #ff4444;
+.cart-item .remove-btn:hover,
+.cart-item .remove-btn:active {
+  background: #ff4444 !important;  /* Force red on hover */
 }
 
 /* Empty cart message */
