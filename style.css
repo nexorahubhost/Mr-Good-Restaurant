@@ -12,8 +12,11 @@ body {
   color: #333;
 }
 
-/* HEADER */
-header {
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #ffffff;
   padding: 15px 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -22,10 +25,63 @@ header {
   z-index: 100;
 }
 
-header h1 {
+nav h1 {
   font-size: 20px;
   font-weight: 600;
   color: #ff6600;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: url('dr-muhammad-amer-77ItGP98s6g-unsplash.jpg')
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 24px;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 /* MENU SECTION */
@@ -76,7 +132,7 @@ header h1 {
   color: #ff6600;
 }
 
-/* PILL BUTTON */
+/* BUTTON */
 .food-item button {
   display: inline-block;
   margin-top: 10px;
@@ -84,7 +140,7 @@ header h1 {
   background: #ff6600;
   color: white;
   border: none;
-  border-radius: 999px; /* pill */
+  border-radius: 999px;
   font-size: 14px;
   cursor: pointer;
   transition: 0.25s;
@@ -144,7 +200,6 @@ details[open] summary::after {
   font-weight: 600;
 }
 
-/* CART BUTTON */
 .cart button {
   background: #25D366;
   color: white;
@@ -173,37 +228,44 @@ footer {
 }
 
 /* RESPONSIVE */
-
-/* Tablets */
 @media (max-width: 768px) {
-  .menu-section {
-    padding: 15px;
+  nav ul {
+    gap: 12px;
   }
 
   .food-container {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
 
-  .food-item {
-    padding: 12px;
+  .hero h2 {
+    font-size: 24px;
   }
 }
 
-/* Phones */
 @media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .food-container {
     grid-template-columns: 1fr;
   }
 
-  .menu-section h3 {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h2 {
     font-size: 20px;
   }
 
-  .food-item h4 {
-    font-size: 15px;
-  }
-
-  .food-item p {
-    font-size: 12px;
+  .hero p {
+    font-size: 13px;
   }
 }
