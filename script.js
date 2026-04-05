@@ -16,13 +16,6 @@ function addToCart(name, price) {
   alert(`${name} added to cart!`);
 }
 
-function removeFromCart(index) {
-  total -= cart[index].price;
-  cart.splice(index, 1);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  updateCart();
-}
-
 function updateCart() {
   let cartList = document.getElementById("cart-items");
   let totalDisplay = document.getElementById("total");
@@ -48,6 +41,13 @@ function updateCart() {
     
     totalDisplay.textContent = `Total: ₦${total}`;
   }
+}
+
+function removeFromCart(index) {
+  total -= cart[index].price;
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCart();
 }
 
 
