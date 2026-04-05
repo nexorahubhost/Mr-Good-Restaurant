@@ -27,27 +27,29 @@ function updateCart() {
   let cartList = document.getElementById("cart-items");
   let totalDisplay = document.getElementById("total");
   
-  if (!cartList || !totalDisplay) return; // Guard clause if elements don't exist
+  if (!cartList || !totalDisplay) return;
 
   cartList.innerHTML = "";
 
   if (cart.length === 0) {
     cartList.innerHTML = "<p>Your cart is empty</p>";
+    totalDisplay.textContent = "Total: ₦0";
   } else {
     cart.forEach((item, index) => {
       let div = document.createElement("div");
       div.className = "cart-item";
-      div.style.cssText = "display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee;";
+      
       div.innerHTML = `
         <span>${item.name} - ₦${item.price}</span>
-        <button onclick="removeFromCart(${index})" style="background:#ff4444;color:white;border:none;padding:2px 8px;border-radius:50%;cursor:pointer;">×</button>
+        <button onclick="removeFromCart(${index})" class="remove-btn">×</button>
       `;
       cartList.appendChild(div);
     });
+    
+    totalDisplay.textContent = `Total: ₦${total}`;
   }
-
-  totalDisplay.textContent = `Total: ₦${total}`;
 }
+
 
 function searchMenu() {
   let input = document.getElementById("searchInput").value.toLowerCase();
