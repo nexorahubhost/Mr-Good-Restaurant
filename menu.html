@@ -7,18 +7,24 @@
 
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
 <!-- NAVIGATION -->
 <nav class="nav">
-  <h3 class="logo">Mr Good</h3>
-  <div class="nav-links">.
+  <h2>Mr Good</h2>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="menu.html">Menu</a>
+    <a href="#cart">Order</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="index.html#about">About Us</a>
   </div>
 </nav>
+
 <section class="menu">
   <h2>Full Menu</h2>
 
@@ -336,7 +342,7 @@
       <h4>Spaghetti</h4>
       <p>1 serving of rich and flavourful spaghetti with all essential garnishing.</p>
       <span>₦2,500</span>
-      <button onclick="addToCart('Porridge Yam', 2500)">Add</button>
+      <button onclick="addToCart('Spaghetti', 2500)">Add</button>
     </div>
 
 
@@ -665,7 +671,7 @@
       </div>
      <div class="food-item">
         <h4>Large Whole Cake</h4>
-       <p>Ideal cake size for larg events or gatherings.</p>
+        <p>Extra large cake for big celebrations.</p>
         <span>₦35000</span>
         <button onclick="addToCart('Large Whole Cake', 35000)">Add</button>
       </div>      
@@ -799,10 +805,10 @@
     </div>
 
     <div class="food-item">
-      <h4>Feroz</h4>
-      <p>A can of Feroz drink</p>
+      <h4>Feyrouz</h4>
+      <p>A can of Feyrouz drink</p>
       <span>₦1000</span>
-      <button onclick="addToCart('Feroz', 1000)">Add</button>
+      <button onclick="addToCart('Feyrouz', 1000)">Add</button>
     </div>
 
     <div class="food-item">
@@ -903,7 +909,7 @@
         <button onclick="addToCart('Kunu Drink', 3000)">Add</button>
 
         <p>Zobo - ₦2000</p>
-        <button onlick="addToCart('Zobo', 2000)">Add</button>
+        <button onclick="addToCart('Zobo', 2000)">Add</button>
 
         <p>Parfait - ₦4000</p>
         <button onclick="addToCart('Parfait', 4000)">Add</button>
@@ -913,6 +919,26 @@
   </div>
 </div>
       </section>
+
+<!-- CART SECTION ADDED HERE -->
+<section id="cart" class="cart">
+  <h2>Your Order</h2>
+
+  <div id="cart-items"></div>
+
+  <h3 id="total">Total: ₦0</h3>
+
+  <button onclick="sendToWhatsApp()">
+    Order on WhatsApp
+  </button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 Mr Good Restaurant. All rights reserved.</p>
+  <p>Web made by Nexora Hub</p>
+</footer>
+
 <script src="script.js"></script>
-      </body>
+</body>
 </html>
