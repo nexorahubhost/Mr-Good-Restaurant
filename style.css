@@ -180,18 +180,28 @@ summary {
   border-radius: 999px;
 }
 
+/* Cart items container */
+#cart-items {
+  margin-bottom: 15px;
+}
+
+/* Each cart item row */
 .cart-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 12px 0;
   border-bottom: 1px solid #eee;
 }
 
+/* Item text (name + price) */
 .cart-item span {
   flex: 1;
+  font-size: 14px;
+  color: #333;
 }
 
+/* Circular remove button */
 .remove-btn {
   background: #ff4444;
   color: white;
@@ -204,10 +214,20 @@ summary {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   margin-left: 10px;
+  flex-shrink: 0;
 }
- 
+
+.remove-btn:hover {
+  background: #cc0000;
+}
+
+/* Empty cart message */
+#cart-items p {
+  color: #999;
+  text-align: center;
+  padding: 20px;
+}
 
 /* CONTACT */
 .contact-buttons {
