@@ -81,6 +81,14 @@ background: #f4f4f4;
   text-decoration: none;
 }
 
+#searchInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+
 /* MENU */
 .menu {
   padding: 40px 20px;
