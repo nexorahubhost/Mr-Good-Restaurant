@@ -37,7 +37,6 @@ background: #f5f5f5;
 .nav a {
   text-decoration: none;
   margin: 0 10px;
-}
   color: #eee;
   font-size: 14px;
 }
@@ -91,7 +90,6 @@ background: #f5f5f5;
 .menu-section {
   background: #ffffff;
   margin-bottom: 20px;
-}
 }
 
 .menu-section h3 {
@@ -229,5 +227,5 @@ html {
   }
 }
 html{
-  scroll-behaviour: smooth;
+  scroll-behavior: smooth;
 }
