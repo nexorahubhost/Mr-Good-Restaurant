@@ -6,16 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
   updateCart();
 });
 
+// ADD TO CART
 function addToCart(name, price) {
   cart.push({ name, price });
   total += price;
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCart();
   
-  // Visual feedback
   alert(`${name} added to cart!`);
 }
 
+// UPDATE CART UI
 function updateCart() {
   let cartList = document.getElementById("cart-items");
   let totalDisplay = document.getElementById("total");
@@ -43,6 +44,7 @@ function updateCart() {
   }
 }
 
+// REMOVE ITEM
 function removeFromCart(index) {
   total -= cart[index].price;
   cart.splice(index, 1);
@@ -50,23 +52,7 @@ function removeFromCart(index) {
   updateCart();
 }
 
-
-function searchMenu() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let items = document.querySelectorAll(".food-item");
-
-  items.forEach(item => {
-    let text = item.innerText.toLowerCase();
-    if (text.includes(input)) {
-      item.style.display = "block";
-      let parentDetails = item.closest("details");
-      if (parentDetails) parentDetails.open = true;
-    } else {
-      item.style.display = "none";
-    }
-  });
-}
-
+// SEND TO WHATSAPP
 function sendToWhatsApp() {
   if (cart.length === 0) {
     alert("Your cart is empty");
@@ -79,7 +65,40 @@ function sendToWhatsApp() {
   });
   message += `%0ATotal: ₦${total}`;
 
-  let phoneNumber = "+234 915 379 2539";
+  let phoneNumber = "2349153792539";
   let url = `https://wa.me/${phoneNumber}?text=${message}`;
   window.open(url, "_blank");
 }
+
+// SEARCH SYSTEM (FIXED)
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("searchInput");
+  const items = document.querySelectorAll(".food-item");
+  const noResult = document.getElementById("no-result");
+
+  if (!searchInput) return;
+
+  searchInput.addEventListener("input", function () {
+    const searchValue = this.value.toLowerCase();
+    let visibleCount = 0;
+
+    items.forEach(item => {
+      const fullText = item.textContent.toLowerCase();
+
+      if (fullText.includes(searchValue)) {
+        item.style.display = "block";
+        visibleCount++;
+
+        let parentDetails = item.closest("details");
+        if (parentDetails) parentDetails.open = true;
+
+      } else {
+        item.style.display = "none";
+      }
+    });
+
+    if (noResult) {
+      noResult.style.display = visibleCount === 0 ? "block" : "none";
+    }
+  });
+});
