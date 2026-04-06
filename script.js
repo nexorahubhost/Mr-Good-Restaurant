@@ -79,7 +79,7 @@ function sendToWhatsApp() {
   });
   message += `%0ATotal: ₦${total}`;
 
-  let phoneNumber = "2349153792537";
+  let phoneNumber = "+234 915 379 2539";
   let url = `https://wa.me/${phoneNumber}?text=${message}`;
   window.open(url, "_blank");
 }
